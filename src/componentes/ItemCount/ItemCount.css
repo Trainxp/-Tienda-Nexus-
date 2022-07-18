@@ -1,0 +1,23 @@
+.ItemCount{
+
+    background-color: aqua;
+    max-width: 75px;
+    height: 120px;
+    display: flex;
+    display:inline-block;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+button{
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid red;
+    border-radius: 30%;
+    margin: 5px;
+}
+
+p{
+    font-size: 1.1em;
+    font-weight: bold;
+}
