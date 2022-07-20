@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemCount from "../ItemCount/ItemCount";
+import Loader from "../Loader/Loader";
 import { celulares } from "../../mock/celulares";
 import  ItemList  from "./ItemList";
 
@@ -9,15 +9,18 @@ import  ItemList  from "./ItemList";
 
 const ItemListContainer = ({greeting}) => {
     const {categoria} = useParams()
+    const [cargando, setCargando] = useState(true);
     const [items,setItems]= useState([]);
      useEffect(() => {
         const traerCelulares = new Promise ((res,rej)=>{
+            setCargando(true)
             setTimeout(() => {
                 res(categoria ?  celulares.filter(obj=>obj.categoria === categoria) : celulares)
             }, 1000 );
         });
         traerCelulares.then((data)=>{
             setItems(data);
+            setCargando(false);
         }).catch((error)=>{
             console.log(error)})
 
@@ -27,8 +30,7 @@ const ItemListContainer = ({greeting}) => {
     return <div >
         <>
         <h1>{greeting}</h1>
-        <div><ItemCount  stock = {15} initial= {1}   /></div>
-        <ItemList itemsCelulares ={items} />
+        {cargando ? <Loader/>  : <ItemList itemsCelulares ={items} /> }        
         </>
     </div>
 }

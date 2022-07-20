@@ -13,7 +13,7 @@ const Restar = () => {contador > 0   ? setnuevoval (contador-1) : setnuevoval(co
  return (
     <div className="ItemCount" >
         
-        <p>{contador}</p>
+        <p className="contador" >{contador}</p>
         <button onClick={Sumar} >+</button>
         <button onClick={Restar} >-</button>
         <button onClick={OnAdd} >AÑADIR</button>

@@ -9,7 +9,7 @@ export const item = ({item}) => {
     <p className='stock' > stock {item.stock}</p>
     <img src={item.img} alt=""   />
     <p className='precio'>precio ${item.price}</p>
-    <Link to = {`item/${item.id}`} >  <button>Ver detalles</button> </Link>
+    <Link to = {`/item/${item.id}`} >  <button>Ver detalles</button> </Link>
 </div>
   )
 }

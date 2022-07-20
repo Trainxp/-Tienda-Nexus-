@@ -2,9 +2,11 @@ import { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail"
 import { celulares } from "../../mock/celulares";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 
 const ItemDetailContainer = () => {
+    const [cargando, setCargando] = useState(true);
     const [item, setItem] = useState({})
     const {id} = useParams()
   
@@ -19,13 +21,15 @@ const ItemDetailContainer = () => {
     useEffect(()=>{
       traerItemPorId().then(respuesta=>{
         setItem(respuesta)
+        setCargando(false);
       }      
       )
     },[id])
   
   
     return (
-      <ItemDetail item={item}/>
+       <> {cargando ? <Loader/>  : <ItemDetail item={item}/> }  </> 
+     
     )
   }
   
