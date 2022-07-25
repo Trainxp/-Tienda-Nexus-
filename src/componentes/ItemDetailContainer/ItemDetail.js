@@ -3,6 +3,8 @@ import ItemCount from "../ItemCount/ItemCount";
 // import ItemCount from "../ItemCount/ItemCount";
 
 const ItemDetail = ({item}) => {
+
+    const OnAdd = (cantidad) => { console.log ( `  "La cantidad añadidad de ${item.name}  es`, cantidad  )   }
   
  return (
     <div className="itemDetail">
@@ -16,7 +18,7 @@ const ItemDetail = ({item}) => {
             <h3 className="precio-container" >${item.price}</h3>
         </div>
 
-        <div><ItemCount  stock = {15} initial= {1}   /></div>
+        <div><ItemCount  stock = {item.stock} initial= {1} OnAdd = {OnAdd}  /></div>
         
         <p className="p-container">
           {item.description}
