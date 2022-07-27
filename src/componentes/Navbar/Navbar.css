@@ -15,7 +15,7 @@
      
 }
 
-.linav {padding: .8em;
+.linav {padding: 1em;
     background-color: black;
     border-radius: 15px;
     margin-left: 1em;
@@ -25,14 +25,14 @@
     justify-content: space-around;
     cursor: pointer;
     list-style: none;
-    font-weight: 800;
+    font-weight: 900;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
     
 }
 
 .logo{
-    width: 20%;
+    width: 24%;
     margin-right: 30em;
     display: flex;
     align-items: flex-start;
