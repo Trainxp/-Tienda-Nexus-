@@ -76,7 +76,7 @@ export const celulares = [
         price: 45700,
         stock: 15,
         img: 'https://res.cloudinary.com/dbaskyy3b/image/upload/v1657740250/MOTO_E20_oepnxr.webp',
-        category: 'CELULARES',
+        categoria: 'motorolla',
         description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt iusto magni quaerat nisi quisquam? Error, earum aspernatur tenetur sint cum in quibusdam eos quae velit ratione maxime! Error, earum repellendus.',
     },

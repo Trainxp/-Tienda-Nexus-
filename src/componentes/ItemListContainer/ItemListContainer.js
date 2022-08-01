@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { celulares } from "../../mock/celulares";
 import  ItemList  from "./ItemList";
+// import {doc,getDoc, getFirestore} from "firebase/firestore"
 
 
 
