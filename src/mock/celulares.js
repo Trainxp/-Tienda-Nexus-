@@ -82,3 +82,45 @@ export const celulares = [
     },
   
 ];
+
+
+// const traerItemPorId = () => {
+//     return new Promise((resolve)=>{
+//       setTimeout(()=>{
+//         resolve(celulares.find(obj => obj.id === id))
+//       }, 1000)
+//     });
+//   };
+
+//   useEffect(()=>{
+//     traerItemPorId().then(respuesta=>{
+//       setItem(respuesta)
+//       setCargando(false);
+//     }      
+//     )
+//   },[id])
+
+
+
+// useEffect(() => {
+//     const traerCelulares = new Promise ((res,rej)=>{
+//         setCargando(true)
+//         setTimeout(() => {
+//             res(categoria ?  celulares.filter(obj=>obj.categoria === categoria) : celulares)
+//         }, 1000 );
+//     });
+//     traerCelulares.then((data)=>{
+//         setItems(data);
+//         setCargando(false);
+//     }).catch((error)=>{
+//         console.log(error)})
+
+//  },[categoria]);
+
+
+// return <div >
+//     <>
+//     <h1>{greeting}</h1>
+//     {cargando ? <Loader/>  : <ItemList itemsCelulares ={items} /> }        
+//     </>
+// </div>

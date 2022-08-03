@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
 import { celulares } from "../../mock/celulares";
 import  ItemList  from "./ItemList";
-// import {doc,getDoc, getFirestore} from "firebase/firestore"
+import {getFirestore,collection, getDocs, query, where } from "firebase/firestore";
 
 
 
@@ -13,25 +13,27 @@ const ItemListContainer = ({greeting}) => {
     const [cargando, setCargando] = useState(true);
     const [items,setItems]= useState([]);
      useEffect(() => {
-        const traerCelulares = new Promise ((res,rej)=>{
-            setCargando(true)
-            setTimeout(() => {
-                res(categoria ?  celulares.filter(obj=>obj.categoria === categoria) : celulares)
-            }, 1000 );
-        });
-        traerCelulares.then((data)=>{
-            setItems(data);
-            setCargando(false);
-        }).catch((error)=>{
-            console.log(error)})
+            setCargando (true)
+            const querydb = getFirestore();
+            const queryColletcion = collection (querydb, "items" );
+          if (categoria)  {
+            const queryFilter = query (queryColletcion, where ("categoria" , "==", categoria  )  )
+            getDocs (queryFilter).then(res=>  setItems(res.docs.map(productsCels=> ({id:productsCels.id, ...productsCels.data()}) ))) 
+          }else {
+            getDocs (queryColletcion).then(res=>  setItems(res.docs.map(productsCels=> ({id:productsCels.id, ...productsCels.data()}) ))) 
+            
+          }
+
+          setCargando (false)
 
      },[categoria]);
 
-
+     
     return <div >
         <>
         <h1>{greeting}</h1>
-        {cargando ? <Loader/>  : <ItemList itemsCelulares ={items} /> }        
+        {cargando ? <Loader/>  : <ItemList itemsCelulares ={items} /> } 
+        {/* <ItemList itemsCelulares ={items} />        */}
         </>
     </div>
 }
