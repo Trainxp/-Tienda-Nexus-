@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
-import { celulares } from "../../mock/celulares";
+
 import  ItemList  from "./ItemList";
 import {getFirestore,collection, getDocs, query, where } from "firebase/firestore";
 
@@ -23,12 +23,12 @@ const ItemListContainer = ({greeting}) => {
             getDocs (queryColletcion).then(res=>  setItems(res.docs.map(productsCels=> ({id:productsCels.id, ...productsCels.data()}) ))) 
             
           }
-
-          setCargando (false)
+          setTimeout(()=>{setCargando(false)},1200)
+          
 
      },[categoria]);
 
-     
+    
     return <div >
         <>
         <h1>{greeting}</h1>

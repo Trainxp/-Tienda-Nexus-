@@ -12,7 +12,7 @@
 }
 
 .imgcartview  {
-    width: 150px;
+    width: 140px;
 }
 
 .cartview p{
@@ -23,4 +23,17 @@
 .cartview:hover{
      transform: scale(1, 1.1);
     transition: ease .3s;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    max-width: 580px;
+}
+
+.formulario div {
+    margin :5px;
+    margin-left: 30px;
 }

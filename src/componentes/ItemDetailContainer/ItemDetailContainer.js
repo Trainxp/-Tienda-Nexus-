@@ -18,10 +18,10 @@ const ItemDetailContainer = () => {
         const querydb = getFirestore ();
         const queryDoc = doc(querydb, "items" , id );
         getDoc (queryDoc).then(res =>setItem({id:res.id, ...res.data()}) )
-        setCargando(false);
+        setTimeout(()=>{setCargando(false)},1100);
 
 
-    },[])
+    },[id])
   
      
     return (
