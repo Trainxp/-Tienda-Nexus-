@@ -2,11 +2,8 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
-
 import  ItemList  from "./ItemList";
 import {getFirestore,collection, getDocs, query, where } from "firebase/firestore";
-
-
 
 const ItemListContainer = ({greeting}) => {
     const {categoria} = useParams()
@@ -24,9 +21,7 @@ const ItemListContainer = ({greeting}) => {
             
           }
           setTimeout(()=>{setCargando(false)},1200)
-          
-
-     },[categoria]);
+          },[categoria]);
 
     
     return <div >
