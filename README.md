@@ -44,7 +44,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 # Nexus es un Ecomerce de venta de celulares desarrollado en React, contando con Firebase como base de datos.
 
-##A continuación se mostrará una simulación de compra en el sitio:
+## A continuación se mostrará una simulación de compra en el sitio:
 ![final](https://user-images.githubusercontent.com/61632891/185515203-64231ea2-c76c-4e63-b252-ec57b973eb8b.gif)
 
 ## Learn More
