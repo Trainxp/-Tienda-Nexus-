@@ -41,10 +41,12 @@
 .categorias{
     display: block;
     height: 220px;
-    
-    
+    background-color: rgba(80, 190, 253, 0.815);
+    border-radius: 15px;
     margin-top: 8em;
-    border: 1px solid red;
+    margin-left: 21em;
+    border: 3px   solid red;
+    z-index: 2;
 }
 
 

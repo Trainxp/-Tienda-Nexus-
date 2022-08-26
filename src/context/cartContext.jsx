@@ -9,7 +9,7 @@ const Provider = (props) =>{
     const [cart,setCart]= useState ([]);
     const [suma,setSuma] = useState(0)
 
-    useEffect(()=>{console.log(cart);},[cart])
+    
 
     const totalCart =()=>{
         let suma = 0
@@ -19,8 +19,7 @@ const Provider = (props) =>{
     }
 
     useEffect(() => {
-        console.log(cart)
-        totalCart()
+       totalCart()
     }, [cart])
 
 
@@ -30,7 +29,6 @@ const addToCart = (item,cantidad) => {
         cart.map(product => {
             if(product.id === item.id){
                 product.cantidad = cantidad
-                console.log('cart', cart)
                 setCart(cart)
             }
             })
@@ -65,10 +63,6 @@ const isInCart = (id) => {
         </CartContext.Provider>
     )
 
-
-
 }
-
-
 
 export default Provider

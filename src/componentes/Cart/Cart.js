@@ -74,8 +74,7 @@ import { collection, getFirestore, addDoc } from "firebase/firestore";
 </div>
             {cart.map((prod) => (
                 <div className="cartview"
-                    key={prod.id}
-                   >
+                    key={prod.id}>
                     <img className="imgcartview" src={prod.img} alt={{}} />
                     <div>
                         <h2>{prod.name}</h2>

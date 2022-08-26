@@ -19,7 +19,7 @@ function App() {
     <BrowserRouter>
         <Navbar/>
         <Routes>
-          <Route path='/'element={<ItemListContainer greeting= "Bienvenido a Nexus" /> } />
+        <Route path='/'element={<ItemListContainer greeting= "Bienvenido a Nexus" /> } />
           <Route path='/categoria/:categoria' element = {<ItemListContainer/>} />
           <Route path='/item/:id' element = { <ItemDetailContainer/> }/>
           <Route path='/cart' element = {<Cart/>} />

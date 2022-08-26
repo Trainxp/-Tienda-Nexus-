@@ -10,7 +10,7 @@ const Navbar = () => {
     return <div className="NavBar" >
          <Link to="/" >  <img className="logo" src={Nexuslogo} alt="logo" ></img> </Link> 
          <ul className="Ulnav" >
-            <li className="linav" >CELULARES</li>
+         <Link to="/" >  <li className="linav" >CELULARES</li>  </Link> 
             <li className="linav">CONTACTO</li>
             <li className="linav">NOSOTROS</li>
           <Link  to="/cart" >  <CartWitget/>  </Link>      
